@@ -1,8 +1,0 @@
-<svg id="icons_write" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <rect id="사각형_2002" data-name="사각형 2002" width="24" height="24" fill="none"/>
-  <rect id="사각형_2003" data-name="사각형 2003" width="24" height="24" fill="none"/>
-  <g id="그룹_690" data-name="그룹 690">
-    <path id="패스_2164" data-name="패스 2164" d="M19.6,4.5h0a3.139,3.139,0,0,0-4.4,0L3.8,15.9a.908.908,0,0,0-.3.7v2.9a.945.945,0,0,0,1,1H7.4a.908.908,0,0,0,.7-.3L19.5,8.8A2.936,2.936,0,0,0,19.6,4.5Z" fill="none" stroke="#01eefe" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
-    <line id="선_51" data-name="선 51" x2="3.5" y2="3.6" transform="translate(15 5.4)" fill="none" stroke="#01eefe" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
-  </g>
-</svg>
