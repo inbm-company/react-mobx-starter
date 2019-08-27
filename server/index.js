@@ -13,5 +13,5 @@ app.use(
 );
 app.use(express.static('build'));
 app.listen(5000, function() {
-  console.log('FNS App is listening on port 5000!');
+  console.log('App is listening on port 5000!');
 });
