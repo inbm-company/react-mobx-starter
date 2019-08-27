@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="24" height="24" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="icons_share" opacity="0.8" clip-path="url(#clip-path)">
+    <rect id="사각형_1988" data-name="사각형 1988" width="24" height="24" fill="none"/>
+    <g id="그룹_673" data-name="그룹 673">
+      <circle id="타원_34" data-name="타원 34" cx="2" cy="2" r="2" transform="translate(3.8 10)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1"/>
+      <g id="그룹_671" data-name="그룹 671">
+        <circle id="타원_35" data-name="타원 35" cx="2" cy="2" r="2" transform="translate(15.3 3.4)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1"/>
+        <line id="선_40" data-name="선 40" y1="4.6" x2="8" transform="translate(7.5 6.4)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1"/>
+      </g>
+      <g id="그룹_672" data-name="그룹 672">
+        <circle id="타원_36" data-name="타원 36" cx="2" cy="2" r="2" transform="translate(15.3 16.6)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1"/>
+        <line id="선_41" data-name="선 41" x2="8" y2="4.6" transform="translate(7.5 13)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1"/>
+      </g>
+    </g>
+  </g>
+</svg>

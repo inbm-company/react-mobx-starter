@@ -1,0 +1,481 @@
+.fanclub-manage-container {
+  .manage-menu {
+    & {
+      margin: 0 15px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .manage-menu-button {
+      & {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .manage-menu-ico {
+        & {
+          width: 30px;
+          height: 30px;
+          background-repeat: no-repeat;
+          background-position: 50% 50%;
+          background-size: 26px auto;
+        }
+        &.manage-menu-ico-member {
+          background-image: url('../images/ico-member.png');
+        }
+
+        &.manage-menu-ico-notice {
+          background-image: url('../images/ico-card.png');
+        }
+
+        &.manage-menu-ico-shop {
+          background-image: url('../images/ico-shop-manage.png');
+        }
+
+        &.manage-menu-ico-ally {
+          background-image: url('../images/ico-alliance-manage.png');
+        }
+
+        &.manage-menu-ico-calendar {
+          background-image: url('../images/ico-calendar-manage.png');
+        }
+      }
+      .manage-menu-text {
+        margin-top: 4px;
+        font-size: 10px;
+        color: #5b5b5b;
+      }
+
+      &.active {
+        .manage-menu-text {
+          color: #01eefe;
+        }
+        .manage-menu-ico-member {
+          background-image: url('../images/ico-member-active.png');
+        }
+        .manage-menu-ico-notice {
+          background-image: url('../images/ico-card-active.png');
+        }
+        .manage-menu-ico-shop {
+          background-image: url('../images/ico-shop-manage-active.png');
+        }
+        .manage-menu-ico-ally {
+          background-image: url('../images/ico-alliance-manage-active.png');
+        }
+        .manage-menu-ico-calendar {
+          background-image: url('../images/ico-calendar-manage-active.png');
+        }
+      }
+    }
+  }
+
+  /* fandlub-member-container */
+  .fanclub-member-container {
+    & {
+      margin: 0 15px;
+    }
+
+    .fanclub-member-container-wrapper {
+      & {
+        padding-bottom: 20px;
+        border-top: 1px solid #444;
+      }
+
+      &.top {
+        border-top: 0 none;
+        margin-top: 10px;
+      }
+      .fanclub-member-header {
+        & {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding-top: 20px;
+        }
+        .fanclub-member-header-wrapper {
+          & {
+            display: flex;
+            align-items: center;
+          }
+          .fanclub-member-title {
+            font-size: 15px;
+            color: #fff;
+          }
+          .fanclub-member-number-background {
+            position: relative;
+            display: flex;
+            margin-left: 6px;
+
+            background-color: #fa3c03;
+            width: 18px;
+            height: 18px;
+            border-radius: 100%;
+          }
+          .fanclub-member-number {
+            font-size: 10px;
+            position: absolute;
+            color: #fff;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+          .fanclub-member-title {
+            font-size: 14px;
+            margin-right: 7px;
+          }
+          .fanclub-member-text {
+            font-size: 12px;
+            color: #dddddd;
+          }
+
+          .fanclub-member-header-button-icon {
+            width: 15px;
+            height: 15px;
+            background: url('../images/ico-fold.png') no-repeat 50% 50%;
+            background-size: 15px auto;
+          }
+        }
+        .fanclub-member-header-button {
+          color: #5b5b5b;
+        }
+      }
+      .fanclub-member-wrapper {
+        & {
+          margin-top: 20px;
+          display: flex;
+          justify-content: flex-start;
+        }
+        .fanclub-member {
+          & {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 65px;
+          }
+          .default-photo {
+            & {
+              width: 40px;
+              height: 40px;
+              overflow: hidden;
+              border-radius: 50%;
+              background: url('../images/ico-user-default.png') no-repeat 50% 50%;
+              background-size: 100% auto;
+            }
+
+            img {
+              width: 100%;
+              height: 100%;
+              border-radius: 50%;
+            }
+          }
+
+          .fanclub-member-name {
+            margin-top: 6px;
+            font-size: 10px;
+            color: #fff;
+          }
+        }
+        .fanclub-member-member-etc {
+          color: #fff;
+          font-size: 12px;
+          margin-left: 10px;
+          margin-top: 15px;
+        }
+      }
+      .fanclub-member-content {
+        & {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+/* 승인 요청 */
+
+.fanclub-member-list-wrapper {
+  & {
+    margin: 20px 15px 0;
+  }
+  .fanclub-member-list {
+    & {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &:not(:first-of-type) {
+      margin-top: 18px;
+    }
+    .fanclub-member-list-inforamtion {
+      & {
+        display: flex;
+      }
+      .default-photo {
+        & {
+          display: inline-flex;
+          width: 40px;
+          height: 40px;
+          overflow: hidden;
+          border-radius: 50%;
+          background: url('../images/ico-user-default.png') no-repeat 50% 50%;
+          background-size: 100% auto;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+        }
+      }
+
+      .fanclub-member-list-status {
+        & {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin-left: 12px;
+        }
+        .fanclub-member-list-name-wrapper {
+          & {
+            display: flex;
+            align-items: center;
+          }
+          .fanclub-member-list-name {
+            font-size: 13px;
+            font-weight: 700;
+            color: #fff;
+          }
+          .fanclub-member-list-name-ico {
+            & {
+              margin-left: 3px;
+              width: 25px;
+              height: 25px;
+              display: block;
+            }
+            &.fanclub-member-list-name-ico-birthday {
+              background: url('../images/ico-birthday-manage.png') no-repeat 50% 50%;
+              background-size: 25px auto;
+            }
+          }
+        }
+        .fanclub-member-list-comment {
+          & {
+            margin-top: 5px;
+            font-size: 11px;
+            color: #dddddd;
+          }
+          &.fanclub-member-list-comment-alter {
+            color: #999;
+            font-size: 10px;
+          }
+        }
+      }
+    }
+    .fanclub-member-date {
+      font-size: 10px;
+      color: #dddddd;
+    }
+  }
+  .fanclub-member-list-button-wrapper {
+    .fanclub-member-list-button {
+      & {
+        background-color: #444;
+        padding: 4px 8px;
+        border-radius: 10px;
+      }
+      &.fanclub-member-list-refuse {
+        color: #999;
+      }
+      &.fanclub-member-list-wait {
+        color: #ddd;
+        background-color: #666;
+        margin-left: 12px;
+      }
+      &.fanclub-member-list-accept {
+        color: #000;
+        background-color: #00d4ff;
+        margin-left: 12px;
+      }
+    }
+  }
+}
+
+/*일정 관리*/
+.timeline-section-alter1 {
+  & {
+    position: relative;
+    margin: 30px 0 0;
+  }
+
+  &:nth-child(2) {
+    &:before {
+      content: '';
+      position: absolute;
+      left: 30px;
+      top: 60px;
+      bottom: 35px;
+      z-index: 1;
+      width: 1px;
+      background: #444548;
+    }
+    // :last-of-type {
+    //   &:before {
+    //     content: '';
+    //     position: absolute;
+    //     left: 30px;
+    //     top: 60px;
+    //     bottom: -20px;
+    //     z-index: 1;
+    //     width: 1px;
+    //   }
+    // }
+  }
+  // &:before {
+  //   content: '';
+  //   position: absolute;
+  //   left: 30px;
+  //   top: 80px;
+  //   bottom: -20px;
+  //   z-index: 1;
+  //   width: 1px;
+  //   background: #444548;
+  // }
+
+  &.timeline-section-alter2 {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 30px;
+      top: 80px;
+      bottom: -20px;
+      z-index: 1;
+      width: 1px;
+      background: #444548;
+    }
+  }
+  &:not(:first-of-type) {
+    margin-top: 20px;
+  }
+
+  .calendar-coming-wrapper {
+    & {
+      display: flex;
+      margin-top: 10px;
+    }
+    .calendar-add-button {
+      color: #01eefe;
+      border: 1px solid #01eefe;
+      width: 60px;
+      height: 60px;
+      border-radius: 100%;
+      font-size: 20px;
+      margin-left: 15px;
+    }
+    .calendar-comming {
+      padding: 15px 15px;
+
+      text-align: center;
+      height: 60px;
+      line-height: 30px;
+      font-size: 14px;
+      width: 180px;
+      color: #fff;
+      background-color: #444;
+      border-radius: 10px;
+      margin-left: 10px;
+    }
+  }
+
+  .timeline-calendar-text {
+    color: #fff;
+    font-size: 14px;
+    margin: 0 15px;
+  }
+  .timeline-calendar-month {
+    display: block;
+    margin-top: 10px;
+    color: #d9d9d9;
+    font-size: 10px;
+    background-color: #444548;
+    padding: 5px 20px;
+  }
+  .timeline-calendar-wrapper {
+    & {
+      margin-top: 15px;
+      margin-left: 30px;
+      position: relative;
+    }
+
+    .timeline-calendar {
+      & {
+        background: linear-gradient(to right, #01eefe, #254ce8);
+        border-radius: 10px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 240px;
+        margin: 0 30px;
+        height: 50px;
+        padding-left: 10px;
+        // line-height: 25px;
+      }
+      // &:before {
+      //   content: '';
+      //   position: absolute;
+      //   left: 0px;
+      //   top: 20px;
+      //   bottom: -20px;
+      //   z-index: 1;
+      //   width: 1px;
+      //   background: #444548;
+      // }
+
+      &.timeline-calendar-alter {
+        background: #444;
+      }
+
+      &:not(:first-of-type) {
+        margin-top: 8px;
+      }
+
+      .timeline-calendar-location-wrapper {
+        & {
+          position: relative;
+          color: #fff;
+          font-size: 14px;
+        }
+        &.timeline-calendar-location-wrapper-alter {
+        }
+
+        .timeline-dot {
+          position: absolute;
+          left: -42px;
+          top: 5px;
+          width: 7px;
+          height: 7px;
+          background-color: #01eefe;
+          border: none;
+          border-radius: 100%;
+          z-index: 99;
+          &.timeline-dot-gray {
+            background-color: #666;
+          }
+        }
+      }
+      .timeline-calendar-date-wrapper {
+        & {
+          margin-top: 8px;
+          color: #d9d9d9;
+          font-size: 10px;
+        }
+        .timeline-calendar-time {
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+}
+.timeline-calendar-last-wrapper {
+  z-index: 99;
+  position: relative;
+}

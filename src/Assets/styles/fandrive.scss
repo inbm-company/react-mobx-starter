@@ -1,0 +1,31 @@
+.fandrive-container {
+  & {
+    display: flex;
+    flex-direction: column;
+
+    margin: 20px 16px 0 16px;
+  }
+  .fandrive-tag-wrapper {
+    & {
+      display: flex;
+
+      width: 800px;
+    }
+    .fandrive-tag {
+      & {
+        background-color: #444548;
+        padding: 4px 7px;
+        border-radius: 8px;
+        color: #d6d6d6;
+        font-size: 11px;
+      }
+      &:not(:first-of-type) {
+        margin-left: 10px;
+      }
+      &.fandrive-tag-active {
+        color: #000;
+        background-color: #00d4ff;
+      }
+    }
+  }
+}

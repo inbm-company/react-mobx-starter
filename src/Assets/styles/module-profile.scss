@@ -1,0 +1,409 @@
+.module-profile-wrapper {
+  & {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+  }
+
+  .bg-dimm {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 99;
+  }
+
+  // height: 60%;
+  .module-profile {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #41434b;
+    z-index: 100;
+    display: flex;
+    flex-wrap: wrap;
+    color: #fff;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    &.module-profile-admin {
+      background-color: #fff;
+      height: 400px;
+    }
+  }
+  .module-profile-image {
+    & {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translate(-50%, -50%);
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      background: #222;
+    }
+    .default-photo {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: url('../images/ico-user-default.png') no-repeat 50% 50%;
+      background-size: 100% auto;
+      border-radius: 50%;
+      overflow: hidden;
+      position: relative;
+    }
+
+    img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+    }
+  }
+  .profile-desc {
+    & {
+      padding-top: 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      color: #e7e7e7;
+      &.profile-desc-admin {
+        color: #41434b;
+      }
+    }
+    .profile-desc-information {
+      & {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+      }
+      .profile-name {
+        font-size: 15px;
+        color: #fff;
+        &.user-admin {
+          color: #f053eb;
+          font-weight: 700;
+        }
+        .u-admin {
+          margin-left: 5px;
+        }
+      }
+
+      .profile-birthday-wrapper {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        .ico-birthday {
+          display: block;
+          width: 10px;
+          height: 10px;
+          background: url('../images/ico-birthday.png') no-repeat 50% 50%;
+          background-size: 10px auto;
+        }
+        .profile-birthday {
+          margin-left: 8px;
+          font-size: 11px;
+        }
+      }
+      .admin-select {
+        -webkit-appearance: none;
+        margin-top: 8px;
+        width: 100px;
+        // height: 50px;
+        border: 1px solid #41434b;
+        border-radius: 20px;
+        padding: 5px 14px;
+        background: url('../images/ico-birthday.png') no-repeat right 10px top 50%;
+        background-size: 15px 15px;
+      }
+
+      .profile-number-wrapper {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        .profile-number {
+          font-size: 11px;
+          margin-right: 3px;
+        }
+        .profile-number-button {
+          background: url('../images/profile/ico-go.png') no-repeat 50% 50%;
+          background-size: 10px auto;
+          width: 16px;
+          height: 12px;
+          &.profile-number-button-admin {
+            display: block;
+            width: 15px;
+            height: 15px;
+            background: url('../images/ico-birthday.png') no-repeat 50% 50%;
+            background-size: 10px auto;
+          }
+        }
+      }
+      .profile-comment {
+        margin-top: 15px;
+        font-size: 14px;
+      }
+      .scroll-horizontal-container {
+        position: relative;
+        text-align: center;
+      }
+      .profile-fan-wrapper {
+        & {
+          display: inline-block;
+          justify-content: center;
+          position: relative;
+          overflow: hidden;
+          margin-top: 40px;
+          height: 90px;
+        }
+
+        .profile-fan {
+          & {
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            font-size: 11px;
+            width: 50px;
+            height: 100%;
+            overflow: hidden;
+            margin: 0 10px;
+          }
+
+          .profile-fan-name {
+            margin-top: 10px;
+          }
+        }
+
+        img {
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+        }
+      }
+    }
+    .profile-register-day {
+      & {
+        font-size: 14px;
+        color: $txt-base-darker-level2-color;
+        margin-top: 15px;
+      }
+    }
+    .profile-fanclub-informaion {
+      font-size: 11px;
+
+      .profile-fanclub-dues {
+        .profile-fanclub-status {
+          font-size: 12px;
+          margin-left: 12px;
+          font-weight: 700;
+        }
+      }
+      .profile-fanclub-activity {
+        & {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-top: 15px;
+        }
+        .profile-fanclub-graph-wrapper {
+          & {
+            display: flex;
+            align-items: center;
+            margin-left: 16px;
+          }
+
+          .profile-fanclub-graph {
+            width: 180px;
+            height: 6px;
+            background: linear-gradient(to right, #0426dd, #00ceff);
+            border-radius: 4px;
+          }
+          .profile-fanclub-percent {
+            margin-left: 10px;
+          }
+        }
+      }
+      .profile-fanclub-card {
+        & {
+          margin-top: 15px;
+          display: flex;
+        }
+
+        .profile-fanclub-card-list {
+          & {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: #fff;
+            margin-left: 12px;
+            padding-left: 12px;
+            background: linear-gradient(to bottom, #ffc1b2, #f7a5c9, #cac0e2, #95caec);
+            width: 200px;
+            height: 45px;
+            border-radius: 3px;
+          }
+        }
+        .card-name {
+          font-size: 14px;
+        }
+        .card-information {
+          margin-top: 5px;
+          .card-number {
+            margin-left: 24px;
+          }
+        }
+      }
+    }
+    .profile-btn-wrapper {
+      & {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        width: 100%;
+      }
+
+      .profile-btn {
+        & {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin: 0 12px;
+        }
+
+        .profile-btn-image {
+          & {
+            width: 50px;
+            height: 50px;
+          }
+          &.profile-btn-chat {
+            background: url('../images/profile/ico-btn1.png') no-repeat 50% 50%;
+            background-size: 26px auto;
+          }
+          &.profile-btn-live {
+            background: url('../images/profile/ico-btn2.png') no-repeat 50% 50%;
+            background-size: 26px auto;
+          }
+          &.profile-btn-bookmark {
+            background: url('../images/profile/ico-btn3.png') no-repeat 50% 50%;
+            background-size: 32px auto;
+          }
+          &.profile-btn-block {
+            background: url('../images/profile/ico-btn4.png') no-repeat 50% 50%;
+            background-size: 45px auto;
+          }
+        }
+        .profile-btn-text {
+          font-size: 12px;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+}
+
+.add-dimm-layer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 9;
+  background: rgba(0, 0, 0, 0.8);
+}
+.fixed-add-layer {
+  & {
+    position: fixed;
+    right: 5px;
+    bottom: 20px;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: column;
+  }
+
+  .line {
+    padding: 10px 15px 10px 0;
+    text-align: right;
+  }
+  .util {
+    & {
+      color: #fff;
+      display: inline-flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    &:after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 40px;
+      background-repeat: no-repeat;
+      background-color: #fff;
+      background-position: 50% 50%;
+      background-size: 25px auto;
+      border-radius: 50%;
+      margin-left: 15px;
+    }
+    &.direct:after {
+      background-image: url('../images/ico-friendadd.svg');
+    }
+    &.sync:after {
+      background-image: url('../images/ico-phonebook.svg');
+    }
+  }
+
+  .fixed-add-button {
+    & {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 56px;
+      height: 56px;
+      margin: 20px 10px 0 0;
+      background-color: #03dac6;
+      border-radius: 28px;
+      transition: all 0.15s ease;
+    }
+    .t {
+      display: none;
+      color: #222;
+      font-size: 15px;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 20px;
+      background: url('../images/ico-add.svg') no-repeat 50% 50%;
+      background-size: 100% auto;
+      transition: all 0.15s ease;
+    }
+    &.active {
+      & {
+        width: 130px;
+        padding: 0 5px 0 20px;
+        justify-content: space-between;
+      }
+      &:after {
+        transform: rotate(45deg);
+      }
+      .t {
+        display: block;
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+@import 'variables';
+
+.btn-search {
+  width: 50px;
+  height: 50px;
+  background: url('../images/ico-search.png') no-repeat 50% 50%;
+  background-size: 30px auto;
+  overflow: hidden;
+  text-indent: -1000px;
+}
+.btn-search2 {
+  width: 40px;
+  height: 40px;
+  background: url('../images/ico-search2.png') no-repeat 50% 50%;
+  background-size: 30px auto;
+  overflow: hidden;
+  text-indent: -1000px;
+}
+
+.btn-type1 {
+  & {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    height: 45px;
+    font-size: 18px;
+    color: $txt-base-color;
+  }
+  &.bg-color1 {
+    background: $button-bg-color1;
+  }
+  &.bg-color2 {
+    background: $button-bg-color3;
+    color: #222;
+  }
+  &:disabled {
+    background: $button-bg-color2;
+    color: rgba(255, 255, 255, 0.2);
+  }
+  &.alter-type1 {
+    font-size: 15px;
+    border-radius: 5px;
+  }
+}
+
+label.btn-type1 {
+  & {
+    position: relative;
+  }
+  input[type='file'] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+}
+
+.btn-join-club,
+.apply-completed {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+  height: 55px;
+  background: #254ce8;
+  color: #222;
+  font-size: 18px;
+  color: #fff;
+}
+
+.apply-completed {
+  background: #d3d3d4;
+  color: #222;
+}

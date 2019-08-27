@@ -1,0 +1,36 @@
+@import 'variables';
+
+.section-tit {
+  & {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .pt {
+    color: $txt-base-darker-color;
+    font-size: $page-tit-font-size;
+  }
+  .st {
+    color: $txt-base-color;
+    font-size: $section-tit-font-size;
+    font-weight: 400;
+  }
+  .see-all {
+    font-size: $section-see-all-font-size;
+    color: $txt-base-darker-color;
+  }
+  .fold-trigger {
+    & {
+      width: 30px;
+      height: 30px;
+      text-indent: -1000px;
+      overflow: hidden;
+      background: url('../images/ico-fold.png') no-repeat 50% 50%;
+      background-size: 26px auto;
+      transition: all 0.15s;
+    }
+    &.ico-fold {
+      transform: rotate(180deg);
+    }
+  }
+}

@@ -1,0 +1,11 @@
+<svg id="icons_trash" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <rect id="사각형_1996" data-name="사각형 1996" width="24" height="24" fill="none"/>
+  <path id="패스_2155" data-name="패스 2155" d="M17.6,6.5H6.4V19a2.006,2.006,0,0,0,2,2h7.2a2.006,2.006,0,0,0,2-2V6.5Z" fill="none" stroke="#01eefe" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+  <path id="패스_2156" data-name="패스 2156" d="M13.9,3.6H10.1a.945.945,0,0,0-1,1V6.5h5.8V4.6A1,1,0,0,0,13.9,3.6Z" fill="none" stroke="#01eefe" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+  <line id="선_44" data-name="선 44" x2="16" transform="translate(4 6.5)" fill="none" stroke="#01eefe" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+  <g id="그룹_684" data-name="그룹 684">
+    <line id="선_45" data-name="선 45" y2="7.8" transform="translate(9 10.1)" fill="none" stroke="#01eefe" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+    <line id="선_46" data-name="선 46" y2="7.8" transform="translate(15 10.1)" fill="none" stroke="#01eefe" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+    <line id="선_47" data-name="선 47" y2="7.8" transform="translate(12 10.1)" fill="none" stroke="#01eefe" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+  </g>
+</svg>

@@ -1,0 +1,234 @@
+@import 'variables';
+
+.fanclub-write-container {
+  .box-type {
+    background: #fff;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 0 15px;
+  }
+  .write-type-selector {
+    & {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .wt-sel {
+      & {
+        width: 30px;
+        height: 30px;
+        text-indent: -1000px;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 100% auto;
+        opacity: 0.3;
+      }
+      &.active {
+        opacity: 1;
+      }
+      &.text {
+        background-image: url('../images/write/ico-text.svg');
+      }
+      &.image {
+        background-image: url('../images/write/ico-image.svg');
+      }
+      &.video {
+        background-image: url('../images/write/ico-video.svg');
+      }
+      &.vote {
+        background-image: url('../images/write/ico-vote.svg');
+      }
+      &.link {
+        background-image: url('../images/write/ico-link.svg');
+      }
+    }
+  }
+  .media-wrapper {
+    margin: 15px 15px 0;
+    padding-bottom: 5px;
+  }
+  .media-upload {
+  }
+  .inp-wrap {
+    .inp-text {
+      width: 100%;
+      height: 25px;
+      font-size: 16px;
+      color: #111;
+      -webkit-appearance: none;
+      border-radius: 0;
+      border: 0 none;
+    }
+    .inp-textarea {
+      & {
+        width: 100%;
+        min-height: 200px;
+        line-height: 1.4;
+        font-size: 16px;
+        color: #333;
+        border-radius: 5px;
+        border: 0 none;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  .content-write-section {
+    margin: 10px 15px 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .img-area {
+    & {
+      margin: 15px 0 0;
+    }
+    img {
+      width: 100%;
+      max-height: 300px;
+      border-radius: 5px;
+    }
+  }
+
+  .video-area {
+    & {
+      position: relative;
+      border-radius: 5px;
+      overflow: hidden;
+      margin: 15px 0 20px;
+    }
+    // &:before {
+    //   content: '';
+    //   position: absolute;
+    //   left: 0;
+    //   right: 0;
+    //   top: 0;
+    //   bottom: 0;
+    //   background: rgba(0, 0, 0, 0.5);
+    // }
+    .poster {
+      width: 100%;
+      border-radius: 5px;
+    }
+    .ico-play {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 130px;
+      height: 130px;
+      background: url('../images/ico-video-play.png') no-repeat 50% 50%;
+      background-size: 100% auto;
+      border-radius: 50%;
+    }
+    .ico-close {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      width: 30px;
+      height: 30px;
+      background: url('../images/ico-video-close.png') no-repeat 50% 50%;
+      background-size: 100% auto;
+      border-radius: 50%;
+    }
+  }
+
+  .youtube-area {
+    & {
+      margin-top: 15px;
+    }
+    .ya-head {
+      & {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .inp-wrap {
+        flex: 1;
+        input {
+          width: 100%;
+          height: 45px;
+          padding: 0 10px;
+          background: #fff;
+          border-radius: 5px;
+          color: #111;
+          font-size: 15px;
+        }
+      }
+      .btn-type1 {
+        width: 80px;
+        margin-left: 8px;
+      }
+    }
+  }
+
+  .video-container {
+    margin: 15px 0 0;
+  }
+
+  .vote-area {
+    & {
+      margin: 0 0 20px;
+    }
+    .vote-item {
+      & {
+        margin: 15px 0 0;
+      }
+      .vote-input {
+        input[type='text'] {
+          border: 1px solid #999;
+          border-radius: 5px;
+          font-size: 14px;
+          color: #333;
+          height: 35px;
+          width: 100%;
+          padding: 0 8px;
+        }
+      }
+      .add-photo {
+        margin: 5px 0 0;
+        text-align: right;
+        color: #666;
+        font-size: 14px;
+      }
+      .vote-img {
+        & {
+          margin: 5px 0 0;
+        }
+        img {
+          width: 100%;
+          border-radius: 5px;
+        }
+      }
+    }
+    .add-vote-item {
+      & {
+        margin-top: 10px;
+      }
+      button {
+        font-size: 14px;
+        color: #333;
+        border: 1px solid #999;
+        border-radius: 5px;
+        padding: 6px 0;
+        text-align: center;
+        width: 100%;
+        background: #efefef;
+      }
+    }
+  }
+
+  .add-option-section {
+    margin: 15px 15px 0;
+    color: $txt-base-color;
+  }
+
+  .bottom-btns-wrap {
+    margin: 20px 15px 15px;
+  }
+}

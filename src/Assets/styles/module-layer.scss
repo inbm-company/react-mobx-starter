@@ -1,0 +1,151 @@
+@import 'variables';
+
+.module-layer {
+  & {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.75);
+  }
+  &.active {
+    z-index: 100;
+    opacity: 1;
+    transition: 0.2s opacity ease;
+  }
+  .module-layer-inner {
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    padding: 20px 15px 10px;
+    border-radius: $border-radius-small;
+  }
+  .alert-tit {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+  }
+  .alert-txt {
+    margin: 20px 0 0;
+    line-height: 1.5;
+    font-size: 14px;
+    color: #555;
+  }
+  .alert-btns-wrap {
+    & {
+      margin: 40px 0 0;
+      text-align: right;
+    }
+    button {
+      & {
+        padding: 10px 15px;
+        font-size: 14px;
+        color: #666;
+      }
+      &.confirm {
+        color: #00d4ff;
+      }
+    }
+  }
+}
+
+/* module-file-upload */
+.module-file-upload {
+  & {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.75);
+  }
+  .mf-inner-wrap {
+    & {
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      bottom: 0;
+      transform: translateY(-100%);
+      transition: translate 0.15s ease;
+      transition-delay: 0.2s;
+    }
+    &.active {
+      transform: translateY(0%);
+    }
+  }
+
+  .mf-btns {
+    & {
+      background: #fff;
+      border-radius: 5px;
+      padding: 10px 15px;
+    }
+    .line {
+      button {
+        & {
+          width: 100%;
+          padding: 8px 0;
+          text-align: left;
+          padding-left: 10px;
+          color: #555;
+          font-size: 16px;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+        }
+        &:before {
+          content: '';
+          display: inline-flex;
+          width: 28px;
+          height: 28px;
+          background-repeat: no-repeat;
+          background-position: 50% 50%;
+          background-size: 26px auto;
+          margin-right: 10px;
+        }
+        &.from-camera:before {
+          background-image: url('../images/ico-camera.png');
+        }
+        &.from-album:before {
+          background-image: url('../images/ico-album.png');
+        }
+      }
+      &:nth-of-type(2) {
+        border-top: 1px solid #ccc;
+      }
+    }
+  }
+  .b-cancel {
+    width: 100%;
+    border-radius: 5px;
+    padding: 15px 0;
+    background: #fff;
+    margin: 10px 0 0;
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+  }
+}
+
+.preview-info-layer {
+  & {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: #212227;
+  }
+  .fanclub-main-container {
+    height: 100%;
+  }
+}

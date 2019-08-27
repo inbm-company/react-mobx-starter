@@ -1,0 +1,14 @@
+.friend-router-container {
+  padding-bottom: 60px;
+}
+.friend-list-container {
+  & {
+    padding: 25px 10px;
+    border-top: 1px solid #444;
+  }
+  &.top {
+    margin-top: 30px;
+    padding-top: 0;
+    border-top: 0;
+  }
+}

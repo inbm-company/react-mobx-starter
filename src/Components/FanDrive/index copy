@@ -1,0 +1,371 @@
+import React, { Component } from 'react';
+import { observer, inject } from 'mobx-react';
+import PropTypes from 'prop-types';
+import { action } from 'mobx';
+import Functions from 'Functions/Common.js';
+import ViewPageHedaer from 'Components/Common/ViewPageHeader';
+import FanclubNavigation from 'Components/Common/FanclubNavigation';
+import FanclubInfo from 'Components/Common/FanclubInfo';
+import NoticeAnnouncement from 'Components/Common/NoticeAnnouncement';
+import PerfectScrollbar from 'react-perfect-scrollbar';
+@inject('store')
+@observer
+export default class FanclubNow extends Component {
+  static propTypes = {
+    store: PropTypes.any
+  };
+
+  render() {
+    const { store } = this.props;
+    const { fanclubStore } = this.props.store;
+    const {
+      router: { goTo }
+    } = store;
+
+    this.clubInfo = fanclubStore.currentFanclubInfo;
+    this.mainImage = `${fanclubStore.IMAGE_SERVER_URL}/${this.clubInfo.main_image}`;
+
+    return (
+      <div className="fanclub-main-container bottom-padding">
+        <div className="fc-main-img">
+          <img src={this.mainImage} alt={this.clubInfo.title} />
+        </div>
+        <div className="fc-main-content">
+          <ViewPageHedaer title={''} searchFlag={true} settingFlag={true} />
+          <div className="fc-header">
+            <h2 className="fc-o-tit">{this.clubInfo.title}</h2>
+            <FanclubInfo info={this.clubInfo} />
+            <FanclubNavigation route={'drive'} />
+          </div>
+          <NoticeAnnouncement type={'alter-type1'} />
+          <div className="fandrive-container">
+            <PerfectScrollbar className="scroll-horizontal-container">
+              <p className="fandrive-tag-wrapper">
+                <button className="fandrive-tag fandrive-tag-active">#갓이유</button>
+                <button className="fandrive-tag">#아이유참좋다</button>
+                <button className="fandrive-tag">#IU</button>
+                <button className="fandrive-tag">#좋은날</button>
+                <button className="fandrive-tag">#호텔 델루나</button>
+                <button className="fandrive-tag">#호텔 델루나</button>
+                <button className="fandrive-tag">#호텔 델루나</button>
+              </p>
+            </PerfectScrollbar>
+            <section className="fandrive-content-section">
+              {/* fandrive-content-header-video */}
+              <div className="fandrive-content-container fandrive-content-container-video">
+                <p className="fandrive-content-container-subtitle">팬들이 꼽은 레전드 영상</p>
+                <div className="fandrive-content-container-title-wrapper">
+                  <p className="fandrive-content-container-title">동영상</p>
+                  <button className="fandrive-content-container-button">전체보기</button>
+                </div>
+                <PerfectScrollbar className="scroll-horizontal-container">
+                  <div className="fandrive-content-wrapper" style={{ width: '840px' }}>
+                    <div className="fandrive-content">
+                      <div className="fandrive-content-img-wrapper">
+                        <img src="../images/@img-twice3.png" alt="" />
+                      </div>
+                      <p className="fandrive-content-information">
+                        <span className="fandrive-content-tag">#아가수</span>
+                        <span className="fandrive-content-title">&#91;MV&#93; IU &#40;아이유&#41;_BBIBBI&#40;삐삐&#41;</span>
+                        <span className="fandrive-content-user-information">
+                          <img className="fandrive-content-user-avatar" src="../images/@img-twice2.png" alt=""></img>
+                          <span className="fandrive-content-user-name">유애나 러버</span>
+                          <span className="fandrive-content-views-wrapper">
+                            <span className="fandrive-views-title">조회수</span>
+                            <span className="fandrive-views">10,350회</span>
+                          </span>
+                          <span className="fandrive-content-likes-wrapper">
+                            <span className="fandrive-likes-title">좋아요</span>
+                            <span className="fandrive-likes">3,052개</span>
+                          </span>
+                        </span>
+                      </p>
+                    </div>
+
+                    <div className="fandrive-content">
+                      <div className="fandrive-content-img-wrapper">
+                        <img src="../images/@img-twice4.png" alt="" />
+                      </div>
+                      <p className="fandrive-content-information">
+                        <span className="fandrive-content-tag">#아가수</span>
+                        <span className="fandrive-content-title">&#91;MV&#93; IU &#40;아이유&#41;_BBIBBI&#40;삐삐&#41;</span>
+                        <span className="fandrive-content-user-information">
+                          <img className="fandrive-content-user-avatar" src="../images/@img-twice2.png" alt=""></img>
+                          <span className="fandrive-content-user-name">유애나 러버</span>
+                          <span className="fandrive-content-views-wrapper">
+                            <span className="fandrive-views-title">조회수</span>
+                            <span className="fandrive-views">10,350회</span>
+                          </span>
+                          <span className="fandrive-content-likes-wrapper">
+                            <span className="fandrive-likes-title">좋아요</span>
+                            <span className="fandrive-likes">3,052개</span>
+                          </span>
+                        </span>
+                      </p>
+                    </div>
+                    <div className="fandrive-content">
+                      <div className="fandrive-content-img-wrapper">
+                        <img src="../images/@img-twice2.png" alt="" />
+                      </div>
+                      <p className="fandrive-content-information">
+                        <span className="fandrive-content-tag">#아가수</span>
+                        <span className="fandrive-content-title">&#91;MV&#93; IU &#40;아이유&#41;_BBIBBI&#40;삐삐&#41;</span>
+                        <span className="fandrive-content-user-information">
+                          <img className="fandrive-content-user-avatar" src="../images/@img-twice2.png" alt=""></img>
+                          <span className="fandrive-content-user-name">유애나 러버</span>
+                          <span className="fandrive-content-views-wrapper">
+                            <span className="fandrive-views-title">조회수</span>
+                            <span className="fandrive-views">10,350회</span>
+                          </span>
+                          <span className="fandrive-content-likes-wrapper">
+                            <span className="fandrive-likes-title">1시간 전</span>
+                          </span>
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                </PerfectScrollbar>
+              </div>
+              {/* //fandrive-content-header-video */}
+              {/* fandrive-content-header-gif */}
+              <div className="fandrive-content-container fandrive-content-container-gif">
+                <p className="fandrive-content-container-subtitle">내 맘속에 저장</p>
+                <div className="fandrive-content-container-title-wrapper">
+                  <p className="fandrive-content-container-title">GIF</p>
+                  <button className="fandrive-content-container-button">전체보기</button>
+                </div>
+                <PerfectScrollbar className="scroll-horizontal-container">
+                  <div className="fandrive-content-wrapper" style={{ width: '840px' }}>
+                    <div className="fandrive-content">
+                      <div className="fandrive-content-img-wrapper">
+                        <img src="../images/@img-twice2.png" alt="" />
+                        <button className="fandrive-content-img-button fandrive-content-img-button-active"></button>
+                      </div>
+                      <p className="fandrive-content-information fandrive-content-information-gif">
+                        <span className="fandrive-content-tag">#아가수</span>
+                        <span className="fandrive-content-download"></span>
+                        <span className="fandrive-content-share"></span>
+                        <span className="fandrive-content-title">팔레트 엔딩</span>
+                        <span className="fandrive-content-user-information">
+                          <img className="fandrive-content-user-avatar" src="../images/@img-twice2.png" alt=""></img>
+                          <span className="fandrive-content-user-name">유애나 러버</span>
+                          <span className="fandrive-content-views-wrapper">
+                            <span className="fandrive-views-title">좋아요</span>
+                            <span className="fandrive-views">10,350개</span>
+                          </span>
+                          <span className="fandrive-content-likes-wrapper">
+                            <span className="fandrive-likes-title">1시간 전</span>
+                          </span>
+                        </span>
+                      </p>
+                    </div>
+
+                    <div className="fandrive-content">
+                      <div className="fandrive-content-img-wrapper">
+                        <img src="../images/@img-twice3.png" alt="" />
+                        <button className="fandrive-content-img-button fandrive-content-img-button-active"></button>
+                      </div>
+                      <p className="fandrive-content-information fandrive-content-information-gif">
+                        <span className="fandrive-content-tag">#아가수</span>
+                        <span className="fandrive-content-download"></span>
+                        <span className="fandrive-content-share"></span>
+                        <span className="fandrive-content-title">팔레트 엔딩</span>
+                        <span className="fandrive-content-user-information">
+                          <img className="fandrive-content-user-avatar" src="../images/@img-twice2.png" alt=""></img>
+                          <span className="fandrive-content-user-name">유애나 러버</span>
+                          <span className="fandrive-content-views-wrapper">
+                            <span className="fandrive-views-title">좋아요</span>
+                            <span className="fandrive-views">10,350개</span>
+                          </span>
+                          <span className="fandrive-content-likes-wrapper">
+                            <span className="fandrive-likes-title">1시간 전</span>
+                          </span>
+                        </span>
+                      </p>
+                    </div>
+
+                    <div className="fandrive-content">
+                      <div className="fandrive-content-img-wrapper">
+                        <img src="../images/@img-twice1.png" alt="" />
+                        <button className="fandrive-content-img-button fandrive-content-img-button-active"></button>
+                      </div>
+                      <p className="fandrive-content-information fandrive-content-information-gif">
+                        <span className="fandrive-content-tag">#아가수</span>
+                        <span className="fandrive-content-download"></span>
+                        <span className="fandrive-content-share"></span>
+                        <span className="fandrive-content-title">팔레트 엔딩</span>
+                        <span className="fandrive-content-user-information">
+                          <img className="fandrive-content-user-avatar" src="../images/@img-twice1.png" alt=""></img>
+                          <span className="fandrive-content-user-name">유애나 러버</span>
+                          <span className="fandrive-content-views-wrapper">
+                            <span className="fandrive-views-title">좋아요</span>
+                            <span className="fandrive-views">3052개</span>
+                          </span>
+                          <span className="fandrive-content-likes-wrapper">
+                            <span className="fandrive-likes-title">1시간 전</span>
+                          </span>
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                </PerfectScrollbar>
+              </div>
+              {/* //fandrive-content-header-gif */}
+              {/* //fandrive-content-header-img */}
+              <div className="fandrive-content-container fandrive-content-container-img">
+                <p className="fandrive-content-container-subtitle">혼자만 보기 아까운</p>
+                <div className="fandrive-content-container-title-wrapper">
+                  <p className="fandrive-content-container-title">이미지</p>
+                  <button className="fandrive-content-container-button">전체보기</button>
+                </div>
+                <PerfectScrollbar className="scroll-horizontal-container">
+                  <div className="fandrive-content-wrapper" style={{ width: '720px' }}>
+                    <div className="fandrive-content">
+                      <div className="fandrive-content-img-wrapper fandrive-content-img-wrapper-alter">
+                        <img src="../images/@img-twice3.png" alt="" />
+                      </div>
+                      <p className="fandrive-content-information fandrive-content-information-img">
+                        <span className="fandrive-content-tag">#아가수</span>
+
+                        <span className="fandrive-content-title">여신 아이유</span>
+                        <span className="fandrive-content-user-information fandrive-content-user-information-img">
+                          <span>
+                            <img className="fandrive-content-user-avatar" src="../images/@img-twice2.png" alt=""></img>
+                            <span className="fandrive-content-user-name">유애나 러버</span>
+                          </span>
+                          <span className="fandrive-content-status-wrapper">
+                            <span className="fandrive-content-views-wrapper">
+                              <span className="fandrive-views-title">좋아요</span>
+                              <span className="fandrive-views">10,350개</span>
+                            </span>
+                            <span className="fandrive-content-likes-wrapper">
+                              <span className="fandrive-likes-title">1시간 전</span>
+                            </span>
+                          </span>
+                        </span>
+                      </p>
+                    </div>
+
+                    <div className="fandrive-content">
+                      <div className="fandrive-content-img-wrapper fandrive-content-img-wrapper-alter">
+                        <img src="../images/@img-twice2.png" alt="" />
+                      </div>
+                      <p className="fandrive-content-information fandrive-content-information-img">
+                        <span className="fandrive-content-tag">#아가수</span>
+
+                        <span className="fandrive-content-title">팔레트 엔딩</span>
+                        <span className="fandrive-content-user-information fandrive-content-user-information-img">
+                          <span>
+                            <img className="fandrive-content-user-avatar" src="../images/@img-twice2.png" alt=""></img>
+                            <span className="fandrive-content-user-name">유애나 러버</span>
+                          </span>
+                          <span className="fandrive-content-status-wrapper">
+                            <span className="fandrive-content-views-wrapper">
+                              <span className="fandrive-views-title">좋아요</span>
+                              <span className="fandrive-views">10,350개</span>
+                            </span>
+                            <span className="fandrive-content-likes-wrapper">
+                              <span className="fandrive-likes-title">1시간 전</span>
+                            </span>
+                          </span>
+                        </span>
+                      </p>
+                    </div>
+
+                    <div className="fandrive-content">
+                      <div className="fandrive-content-img-wrapper fandrive-content-img-wrapper-alter">
+                        <img src="../images/@img-twice4.png" alt="" />
+                      </div>
+                      <p className="fandrive-content-information fandrive-content-information-img">
+                        <span className="fandrive-content-tag">#아가수</span>
+
+                        <span className="fandrive-content-title">팔레트 엔딩</span>
+                        <span className="fandrive-content-user-information fandrive-content-user-information-img">
+                          <span>
+                            <img className="fandrive-content-user-avatar" src="../images/@img-twice2.png" alt=""></img>
+                            <span className="fandrive-content-user-name">유애나 러버</span>
+                          </span>
+                          <span className="fandrive-content-status-wrapper">
+                            <span className="fandrive-content-views-wrapper">
+                              <span className="fandrive-views-title">좋아요</span>
+                              <span className="fandrive-views">10,350개</span>
+                            </span>
+                            <span className="fandrive-content-likes-wrapper">
+                              <span className="fandrive-likes-title">1시간 전</span>
+                            </span>
+                          </span>
+                        </span>
+                      </p>
+                    </div>
+                    <div className="fandrive-content">
+                      <div className="fandrive-content-img-wrapper fandrive-content-img-wrapper-alter">
+                        <img src="../images/@img-twice3.png" alt="" />
+                      </div>
+                      <p className="fandrive-content-information fandrive-content-information-img">
+                        <span className="fandrive-content-tag">#아가수</span>
+
+                        <span className="fandrive-content-title">팔레트 엔딩</span>
+                        <span className="fandrive-content-user-information fandrive-content-user-information-img">
+                          <span>
+                            <img className="fandrive-content-user-avatar" src="../images/@img-twice2.png" alt=""></img>
+                            <span className="fandrive-content-user-name">유애나 러버</span>
+                          </span>
+                          <span className="fandrive-content-status-wrapper">
+                            <span className="fandrive-content-views-wrapper">
+                              <span className="fandrive-views-title">좋아요</span>
+                              <span className="fandrive-views">10,350개</span>
+                            </span>
+                            <span className="fandrive-content-likes-wrapper">
+                              <span className="fandrive-likes-title">1시간 전</span>
+                            </span>
+                          </span>
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                </PerfectScrollbar>
+              </div>
+              {/* //fandrive-content-header-img */}
+              {/* //fandrive-content-header-ico */}
+              <div className="fandrive-content-container fandrive-content-container-imo">
+                <p className="fandrive-content-container-subtitle">Make or Get!</p>
+                <div className="fandrive-content-container-title-wrapper">
+                  <p className="fandrive-content-container-title">이모티콘</p>
+                  <button className="fandrive-content-container-button">전체보기</button>
+                </div>
+
+                <div className="fandrive-content-wrapper">
+                  <div className="fandrive-content">
+                    <div className="fandrive-content-imo-wrapper">
+                      <span className="fandrive-content-imo-type">fns 공식</span>
+                      <PerfectScrollbar className="scroll-horizontal-container">
+                        <div className="fandrive-content-imo">
+                          <img src="../images/@img-imo1.png" alt="" />
+                          <img src="../images/@img-imo2.png" alt="" />
+                          <img src="../images/@img-imo3.png" alt="" />
+                          <img src="../images/@img-imo4.png" alt="" />
+                        </div>
+                      </PerfectScrollbar>
+                    </div>
+
+                    <div className="fandrive-content-imo-wrapper">
+                      <span className="fandrive-content-imo-type">fns 공식</span>
+                      <PerfectScrollbar className="scroll-horizontal-container">
+                        <div className="fandrive-content-imo">
+                          <img src="../images/@img-imo1.png" alt="" />
+                          <img src="../images/@img-imo2.png" alt="" />
+                          <img src="../images/@img-imo3.png" alt="" />
+                          <img src="../images/@img-imo4.png" alt="" />
+                        </div>
+                      </PerfectScrollbar>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
